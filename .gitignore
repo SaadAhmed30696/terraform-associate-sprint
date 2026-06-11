@@ -1,0 +1,31 @@
+# ==========================================
+# TERRAFORM SPECIFIC RULES
+# ==========================================
+
+# Ignore local state files (Crucial for security!)
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+
+# Ignore the hidden internal plugin directory
+.terraform/
+
+# Ignore the local lock file if you plan to shift environments frequently
+# (Note: For team projects, keeping this tracked is a best practice, but safe to ignore for local labs)
+.terraform.lock.hcl
+
+# Ignore all variable value files containing sensitive environment secrets
+*.tfvars
+*.tfvars.json
+secrets.tfvars
+
+# ==========================================
+# SYSTEM AND EDITOR CLUTTER
+# ==========================================
+
+# Ignore VS Code specific configurations
+.vscode/
+
+# Ignore Windows system thumbnail cache files
+Thumbs.db
+ehthumbs.db
